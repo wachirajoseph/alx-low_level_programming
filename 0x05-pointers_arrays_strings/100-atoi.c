@@ -1,22 +1,47 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_array - prints n elements of an array of integers
- * @a: array to print
- * @n: number of elemtnts to print
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ *
+ * Return: the int converted from the string
  */
-void print_array(int *a, int n)
+int _atoi(char *s)
 {
-	int i;
+	int i, d, n, len, f, digit;
 
-	for (i = 0; i < n; i++)
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (i < len && f == 0)
 	{
-		if (i == 0)
-			printf("%d", a[i]);
-		else
-			printf(", %d", a[i]);
+		if (s[i] == '-')
+			++d;
+
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
+		}
+		i++;
 	}
-		printf("\n");
+
+	if (f == 0)
+		return (0);
+
+	return (n);
 }
 
