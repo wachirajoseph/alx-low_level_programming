@@ -18,4 +18,3 @@ void print_diagsums(int *a, int size)
 		total2 = total2 + a[n];
 	printf("%d, %d\n", total1, total2);
 }
-
