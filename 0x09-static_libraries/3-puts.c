@@ -1,25 +1,11 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
-/**
- *_puts - prints a string
- *@str: string to print
- *
- *Description: prints a string
- *On Success: return the number of characters printed
- */
-
-
-
-void _puts(char *str)
-
+void _puts(char *s)
 {
-
-	while (*str)
-
-	_putchar(*str++);
-
-
-
-	_putchar('\n');
-
+    puts(s);
 }
+
