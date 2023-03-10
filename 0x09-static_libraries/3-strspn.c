@@ -4,8 +4,8 @@
 #include <ctype.h>
 #include <string.h>
 
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-    return strcmp(s1, s2);
+    return strspn(s, accept);
 }
 
