@@ -1,9 +1,3 @@
-101-mul.c
-@abdiomari
-abdiomari malloc free
- History
- 1 contributor
-99 lines (92 sloc)  1.65 KB
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
@@ -103,4 +97,3 @@ int main(int argc, char *argv[])
 	free(result);
 	return (0);
 }
-
